@@ -193,6 +193,64 @@ const M3Styles = () => (
       display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);letter-spacing:.005em}
     .nav-link:hover{background:var(--state-hover);color:var(--md-on-surface)}
     .nav-link.active{color:var(--secondary);background:var(--md-primary-container)}
+    body.rest-dark .nav-link.active{color:#C5CAE9;background:rgba(92,107,192,.35);border:1px solid rgba(92,107,192,.5)}
+    body.rest-dark .daily-progress-bar{background:#2E3450}
+    body.rest-dark .daily-progress-fill{background:linear-gradient(90deg,#5C6BC0,#7986CB)}
+    body.rest-dark .progress-count{color:#7986CB !important}
+    body.rest-dark .progress-pct{color:#9BA6BC !important}
+    body.rest-dark .btn-outlined{border-color:#4A5280;color:#C5CAE9}
+    body.rest-dark .btn-outlined:hover{border-color:#7986CB;color:#E8EAFC;background:rgba(121,134,203,.12)}
+    body.rest-dark .activity-label{color:#A8B4C8 !important}
+    body.rest-dark .activity-icon{color:#7986CB !important}
+    body.rest-dark .activity-status{color:#7986CB !important}
+    body.rest-dark .activity-stat-key{color:#9BA6BC !important}
+    body.rest-dark .activity-stat-val-primary{color:#7986CB !important}
+    body.rest-dark .activity-stat-val-accent{color:#FFB74D !important}
+    body.rest-dark .activity-stat-val-green{color:#66BB6A !important}
+    body.rest-dark .activity-idle-bg{background:rgba(30,34,53,.95) !important;border-color:var(--md-outline-variant) !important}
+    body.rest-dark .activity-idle-icon{color:#7986CB !important}
+    body.rest-dark .kpi-value{color:#7986CB !important}
+    body.rest-dark .kpi-icon-bg{color:#7986CB !important;background:rgba(121,134,203,.15) !important}
+    body.rest-dark .badge-navy{background:rgba(92,107,192,.3);color:#C5CAE9}
+    body.rest-dark .ag-cell{border-color:#2E3450;background:transparent}
+    body.rest-dark .ag-cell.filled{background:rgba(121,134,203,.06);border-color:rgba(121,134,203,.2)}
+    body.rest-dark .ag-header{color:#9BA6BC}
+    body.rest-dark .ag-time-label{color:#545C7E}
+    body.rest-dark .agenda-grid{background:var(--md-surface);border-color:#2E3450}
+    body.rest-dark .agenda-grid .label-sm{color:#6E7A96}
+    body.rest-dark .agenda-today-num{color:#9FA8DA !important;background:rgba(121,134,203,.25) !important}
+    body.rest-dark .agenda-day-num{color:#C5CAE9 !important}
+    body.rest-dark .agenda-border{border-color:#2A2F48 !important}
+    /* Plans screen dark overrides */
+    body.rest-dark .plan-header-pill{background:rgba(121,134,203,.2) !important;border-color:#3D4468 !important}
+    body.rest-dark .plan-header-pill span{color:#9FA8DA !important}
+    body.rest-dark .plan-header-pill svg{color:#9FA8DA !important}
+    body.rest-dark .plan-heading-accent{color:#9FA8DA !important}
+    body.rest-dark .plan-card-pro{background:#1E2245 !important;border-color:#5C6BC0 !important}
+    body.rest-dark .plan-card-pro .plan-name{color:#9FA8DA !important}
+    body.rest-dark .plan-card-pro .plan-feature{color:#C5CAE9 !important}
+    body.rest-dark .plan-card-pro .plan-price{color:#E8EAFC !important}
+    body.rest-dark .plan-card-pro .plan-period{color:#9BA6BC !important}
+    body.rest-dark .plan-card-pro .plan-icon-bg{background:rgba(121,134,203,.2) !important;color:#9FA8DA !important}
+    body.rest-dark .plan-billing-toggle{background:var(--md-surface-variant) !important;border-color:#3D4468 !important}
+    /* Daily Success Report dark overrides */
+    body.rest-dark .report-score-ring{stroke:#7986CB !important}
+    body.rest-dark .report-score-track{stroke:#2E3450 !important}
+    body.rest-dark .report-score-num{fill:#9FA8DA !important}
+    body.rest-dark .report-score-label{fill:#6E7A96 !important}
+    body.rest-dark .report-headline{color:#9FA8DA !important}
+    body.rest-dark .report-score-bg{background:rgba(121,134,203,.12) !important}
+    body.rest-dark .report-icon-bg{background:rgba(121,134,203,.2) !important}
+    body.rest-dark .report-icon-bg svg{color:#9FA8DA !important}
+    body.rest-dark .report-metric-pct-primary{color:#9FA8DA !important}
+    body.rest-dark .report-bar-primary{background:#7986CB !important}
+    body.rest-dark .badge-navy{background:rgba(92,107,192,.3) !important;color:#C5CAE9 !important}
+    body.rest-dark .title-sm{color:#D8DCF0}
+    body.rest-dark .title-md{color:#E4E8F5}
+    body.rest-dark .body-md{color:#C8D0E4}
+    body.rest-dark .body-sm{color:#B0BAD0}
+    body.rest-dark .label-md{color:#9BA6BC}
+    body.rest-dark .label-sm{color:#8D99B2}
 
     /* ── SNACKBAR / TOAST ── */
     .snackbar{position:fixed;left:50%;transform:translateX(-50%);z-index:400;
@@ -674,7 +732,7 @@ const SESSION_MODES = [
   { id:"deep-flow",     label:"Deep Flow",     icon:<Flame size={18}/>,  desc:"Enfoque máximo, UI minimal",  colorHex:"#1A237E", bg:"#E8EAF6", duration:50 },
   { id:"steady-rhythm", label:"Steady Rhythm", icon:<Waves size={18}/>,  desc:"Ciclos Pomodoro con apoyo",   colorHex:"#FF6D00", bg:"#FFF8F0", duration:25 },
   { id:"vital-reset",   label:"Vital Reset",   icon:<Leaf size={18}/>,   desc:"Recuperación activa",         colorHex:"#2E7D32", bg:"#E8F5E9", duration:15 },
-]
+];
 // Fix color references
 SESSION_MODES[0].color = "#1A237E";
 SESSION_MODES[1].color = "#FF6D00";
@@ -1038,10 +1096,10 @@ function KpiCard({ icon, label, value, color, badge, badgeCls }) {
   return (
     <div className="m3-card" style={{ padding:20 }} role="region" aria-label={label}>
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:14 }}>
-        <div style={{ width:42, height:42, borderRadius:14, background:`${color}16`, display:"flex", alignItems:"center", justifyContent:"center", color }}>{icon}</div>
+        <div className="kpi-icon-bg" style={{ width:42, height:42, borderRadius:14, background:`${color}16`, display:"flex", alignItems:"center", justifyContent:"center", color }}>{icon}</div>
         {badge && <Badge label={badge} cls={badgeCls} />}
       </div>
-      <div style={{ fontFamily:"var(--font-mono)", fontSize:"1.9rem", fontWeight:500, color, lineHeight:1 }}>{value}</div>
+      <div className="kpi-value" style={{ fontFamily:"var(--font-mono)", fontSize:"1.9rem", fontWeight:500, color, lineHeight:1 }}>{value}</div>
       <div className="label-md" style={{ color:"var(--md-on-surface-variant)", marginTop:4, fontSize:".6rem", whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{label}</div>
     </div>
   );
@@ -1411,7 +1469,7 @@ function DailySuccessReport({ onClose }) {
 
         {/* ── Header ── */}
         <div style={{ display:"flex", alignItems:"flex-start", gap:10, padding:"20px 24px 16px", flexShrink:0 }}>
-          <div style={{ width:40, height:40, borderRadius:12, background:"var(--md-primary-container)", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+          <div className="report-icon-bg" style={{ width:40, height:40, borderRadius:12, background:"var(--md-primary-container)", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
             <Trophy size={18} style={{ color:"var(--secondary)" }}/>
           </div>
           <div style={{ flex:1 }}>
@@ -1425,17 +1483,17 @@ function DailySuccessReport({ onClose }) {
         <div style={{ flex:1, minHeight:0, display:"flex", flexDirection:"column", padding:"0 24px", gap:14, overflow:"hidden" }}>
 
           {/* Score card: ring + headline side by side */}
-          <div style={{ flexShrink:0, background:"var(--md-surface-variant)", borderRadius:"var(--rad-md)", padding:"14px 18px",
+          <div className="report-score-bg" style={{ flexShrink:0, background:"var(--md-surface-variant)", borderRadius:"var(--rad-md)", padding:"14px 18px",
             display:"flex", alignItems:"center", gap:16 }}>
             <svg width={88} height={88} viewBox="0 0 106 106" aria-hidden="true" style={{ flexShrink:0 }}>
-              <circle cx={53} cy={53} r={r} fill="none" stroke="var(--md-primary-container)" strokeWidth={9}/>
-              <circle cx={53} cy={53} r={r} fill="none" stroke="var(--secondary)" strokeWidth={9}
+              <circle cx={53} cy={53} r={r} className="report-score-track" fill="none" stroke="var(--md-primary-container)" strokeWidth={9}/>
+              <circle cx={53} cy={53} r={r} className="report-score-ring" fill="none" stroke="var(--secondary)" strokeWidth={9}
                 strokeLinecap="round" strokeDasharray={circ} strokeDashoffset={offset} className="report-ring"/>
-              <text x={53} y={50} textAnchor="middle" fontFamily="var(--font-mono)" fontSize={24} fontWeight={700} fill="var(--secondary)">{overall}</text>
-              <text x={53} y={66} textAnchor="middle" fontFamily="var(--font-display)" fontSize={9} fill="var(--md-on-surface-variant)">PUNTUACIÓN</text>
+              <text x={53} y={50} className="report-score-num" textAnchor="middle" fontFamily="var(--font-mono)" fontSize={24} fontWeight={700} fill="var(--secondary)">{overall}</text>
+              <text x={53} y={66} className="report-score-label" textAnchor="middle" fontFamily="var(--font-display)" fontSize={9} fill="var(--md-on-surface-variant)">PUNTUACIÓN</text>
             </svg>
             <div>
-              <div className="title-md" style={{ color:"var(--secondary)", marginBottom:5 }}>
+              <div className="title-md report-headline" style={{ color:"var(--secondary)", marginBottom:5 }}>
                 {overall>=80?"¡Día excelente!":overall>=60?"Buen ritmo hoy":"Hay margen para crecer"}
               </div>
               <p className="body-sm" style={{ color:"var(--md-on-surface-variant)", lineHeight:1.6 }}>
@@ -1451,10 +1509,10 @@ function DailySuccessReport({ onClose }) {
                 <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
                   <span style={{ color:m.color, display:"flex", alignItems:"center" }}>{m.icon}</span>
                   <span className="label-lg" style={{ flex:1, fontWeight:600, color:"var(--md-on-surface)" }}>{m.label}</span>
-                  <span style={{ fontFamily:"var(--font-mono)", fontSize:".85rem", fontWeight:700, color:m.color }}>{m.value}%</span>
+                  <span className={m.color==="var(--secondary)"?"report-metric-pct-primary":""} style={{ fontFamily:"var(--font-mono)", fontSize:".85rem", fontWeight:700, color:m.color }}>{m.value}%</span>
                 </div>
                 <div style={{ height:6, borderRadius:99, background:"var(--md-outline-variant)", overflow:"hidden", marginBottom:3 }}>
-                  <div style={{ height:"100%", width:`${m.value}%`, background:m.color, borderRadius:99, transition:"width .6s ease" }}/>
+                  <div className={m.color==="var(--secondary)"?"report-bar-primary":""} style={{ height:"100%", width:`${m.value}%`, background:m.color, borderRadius:99, transition:"width .6s ease" }}/>
                 </div>
                 <div className="body-sm" style={{ color:"var(--md-on-surface-variant)", fontSize:".75rem" }}>{m.detail}</div>
               </div>
@@ -2549,10 +2607,10 @@ function ProdChart({ bars, active, lockedByConc }) {
     <div style={{ position:"relative" }}>
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:10 }}>
         <div style={{ display:"flex", alignItems:"center", gap:7 }}>
-          <Keyboard size={13} style={{ color:active?"var(--secondary)":"var(--md-outline)" }}/>
-          <span className="body-sm" style={{ color:active?"var(--md-on-surface-variant)":"var(--md-outline)", fontWeight:600 }}>Actividad teclado / ratón</span>
+          <Keyboard size={13} className="activity-icon" style={{ color:active?"var(--secondary)":"var(--md-outline)" }}/>
+          <span className="body-sm activity-label" style={{ color:active?"var(--md-on-surface-variant)":"var(--md-outline)", fontWeight:600 }}>Actividad teclado / ratón</span>
         </div>
-        <span style={{ fontFamily:"var(--font-mono)", fontSize:".68rem", fontWeight:700, color:lockedByConc?"#ca8a04":active?"var(--secondary)":"var(--md-outline)" }}>
+        <span className="activity-status" style={{ fontFamily:"var(--font-mono)", fontSize:".68rem", fontWeight:700, color:lockedByConc?"#ca8a04":active?"var(--secondary)":"var(--md-outline)" }}>
           {lockedByConc?"— En pausa":active?"● Activo":"○ Listo cuando quieras"}
         </span>
       </div>
@@ -2567,8 +2625,8 @@ function ProdChart({ bars, active, lockedByConc }) {
         </div>
         {!active && (
           <div style={{ position:"absolute", inset:0, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:6, pointerEvents:"none" }}>
-            <div style={{ width:36, height:36, borderRadius:"50%", background:"rgba(255,255,255,.95)", border:"1.5px solid var(--md-outline-variant)", display:"flex", alignItems:"center", justifyContent:"center" }}>
-              <Keyboard size={16} style={{ color:"var(--md-outline)" }}/>
+            <div className="activity-idle-bg" style={{ width:36, height:36, borderRadius:"50%", background:"rgba(255,255,255,.95)", border:"1.5px solid var(--md-outline-variant)", display:"flex", alignItems:"center", justifyContent:"center" }}>
+              <Keyboard size={16} className="activity-idle-icon" style={{ color:"var(--md-outline)" }}/>
             </div>
             <span style={{ fontSize:".72rem", fontWeight:700, color:lockedByConc?"#ca8a04":"var(--md-on-surface-variant)", background:"rgba(255,255,255,.92)", padding:"3px 10px", borderRadius:99, border:`1px solid ${lockedByConc?"rgba(202,138,4,.2)":"var(--md-outline-variant)"}` }}>
               {lockedByConc?"⏸ Funciones secundarias pausadas":"Comienza una sesión para ver tu actividad aquí"}
@@ -2577,9 +2635,9 @@ function ProdChart({ bars, active, lockedByConc }) {
         )}
       </div>
       <div style={{ display:"flex", gap:20, marginTop:10, fontSize:".73rem", color:!active?"var(--md-outline)":"var(--md-on-surface-variant)", transition:"color .4s" }}>
-        <span>Pulsaciones: <strong style={{ color:!active?"var(--md-outline)":"var(--secondary)", fontFamily:"var(--font-mono)" }}>{!active?"—":`${Math.round(last*4)}/min`}</strong></span>
-        <span>Clics: <strong style={{ color:!active?"var(--md-outline)":"var(--accent)", fontFamily:"var(--font-mono)" }}>{!active?"—":`${Math.round(last*1.2)}/min`}</strong></span>
-        <span>Eficiencia: <strong style={{ color:!active?"var(--md-outline)":"#2E7D32", fontFamily:"var(--font-mono)" }}>{!active?"—":`${Math.min(99,Math.round(last))}%`}</strong></span>
+        <span className="activity-stat-key">Pulsaciones: <strong className="activity-stat-val-primary" style={{ color:!active?"var(--md-outline)":"var(--secondary)", fontFamily:"var(--font-mono)" }}>{!active?"—":`${Math.round(last*4)}/min`}</strong></span>
+        <span className="activity-stat-key">Clics: <strong className="activity-stat-val-accent" style={{ color:!active?"var(--md-outline)":"var(--accent)", fontFamily:"var(--font-mono)" }}>{!active?"—":`${Math.round(last*1.2)}/min`}</strong></span>
+        <span className="activity-stat-key">Eficiencia: <strong className="activity-stat-val-green" style={{ color:!active?"var(--md-outline)":"#2E7D32", fontFamily:"var(--font-mono)" }}>{!active?"—":`${Math.min(99,Math.round(last))}%`}</strong></span>
       </div>
     </div>
   );
@@ -2939,10 +2997,101 @@ const DEMO_TRACKS = [
   { id:10, emoji:"⚡", title:"Electric Dreams",      artist:"Synthwave Study",     dur:"5:55" },
 ];
 
-function MiniPlayer({ audioHub }) {
+/* ════════════════════════════════════════════
+   QUEUE MODAL — Cola de reproducción (portal-level)
+════════════════════════════════════════════ */
+function QueueModal({ open, onClose, trackIdx, setTrackIdx, playing, setPlaying }) {
+  if (!open) return null;
+  const track = DEMO_TRACKS[trackIdx];
+  return (
+    <div role="dialog" aria-modal="true" aria-label="Cola de reproducción"
+      style={{ position:"fixed", inset:0, zIndex:9999,
+        display:"flex", alignItems:"center", justifyContent:"center" }}
+      onClick={onClose}>
+      <div className="m3-card fi" onClick={e=>e.stopPropagation()}
+        style={{ width:"100%", maxWidth:420, margin:16, padding:0, overflow:"hidden",
+          boxShadow:"var(--md-elev-3)", animation:"dialog-in .22s cubic-bezier(.34,1.2,.64,1) both",
+          backdropFilter:"blur(20px)", WebkitBackdropFilter:"blur(20px)",
+          background:"rgba(255,255,255,0.75)" }}>
+
+        {/* Header */}
+        <div style={{ padding:"20px 20px 14px", borderBottom:"1px solid var(--md-outline-variant)",
+          display:"flex", alignItems:"center", gap:12 }}>
+          <div style={{ width:40, height:40, borderRadius:12, background:"var(--md-primary-container)",
+            display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+            <ListMusic size={18} style={{ color:"var(--secondary)" }}/>
+          </div>
+          <div style={{ flex:1 }}>
+            <div className="title-md">Cola de reproducción</div>
+            <div className="body-sm" style={{ color:"var(--md-on-surface-variant)" }}>
+              {DEMO_TRACKS.length} canciones · reproducción automática
+            </div>
+          </div>
+          <button className="btn-icon" onClick={onClose} aria-label="Cerrar cola">
+            <X size={15}/>
+          </button>
+        </div>
+
+        {/* Pista activa destacada */}
+        <div style={{ padding:"12px 20px", background:"var(--md-surface-1)",
+          borderBottom:"1px solid var(--md-outline-variant)",
+          display:"flex", alignItems:"center", gap:12 }}>
+          <div style={{ fontSize:"1.5rem" }}>{track.emoji}</div>
+          <div style={{ flex:1, minWidth:0 }}>
+            <div className="label-sm" style={{ color:"var(--secondary)", marginBottom:2 }}>
+              {playing ? "▶ Reproduciendo ahora" : "En pausa"}
+            </div>
+            <div className="title-sm" style={{ color:"var(--md-on-surface)",
+              whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>
+              {track.title}
+            </div>
+            <div className="body-sm" style={{ color:"var(--md-on-surface-variant)" }}>
+              {track.artist} · {track.dur}
+            </div>
+          </div>
+        </div>
+
+        {/* Lista de canciones */}
+        <div style={{ maxHeight:340, overflowY:"auto" }}>
+          {DEMO_TRACKS.map((t, i) => (
+            <button key={t.id}
+              className={`queue-track ${i===trackIdx?"playing":""}`}
+              onClick={()=>{ setTrackIdx(i); setPlaying(true); onClose(); }}>
+              <div className="queue-track-num">
+                {i===trackIdx && playing
+                  ? <span style={{ color:"var(--secondary)", fontSize:".7rem" }}>▶</span>
+                  : <span style={{ color:"var(--md-on-surface-variant)" }}>{i+1}</span>}
+              </div>
+              <div className="queue-track-thumb"
+                style={{ background: i===trackIdx ? "var(--md-primary-container)" : "var(--md-surface-variant)" }}>
+                {t.emoji}
+              </div>
+              <div style={{ flex:1, minWidth:0 }}>
+                <div className="body-md" style={{ fontWeight:600, fontSize:".82rem",
+                  color: i===trackIdx ? "var(--secondary)" : "var(--md-on-surface)",
+                  whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>
+                  {t.title}
+                </div>
+                <div className="body-sm" style={{ color:"var(--md-on-surface-variant)", fontSize:".72rem" }}>
+                  {t.artist}
+                </div>
+              </div>
+              <span style={{ fontFamily:"var(--font-mono)", fontSize:".68rem",
+                color:"var(--md-on-surface-variant)", flexShrink:0 }}>{t.dur}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MiniPlayer({ audioHub, queueOpen: queueOpenProp, setQueueOpen: setQueueOpenProp }) {
   const [playing, setPlaying]     = useState(false);
   const [trackIdx, setTrackIdx]   = useState(0);
-  const [queueOpen, setQueueOpen] = useState(false);
+  const [localQueueOpen, setLocalQueueOpen] = useState(false);
+  const queueOpen = queueOpenProp !== undefined ? queueOpenProp : localQueueOpen;
+  const setQueueOpen = setQueueOpenProp || setLocalQueueOpen;
 
   const track = DEMO_TRACKS[trackIdx];
   const prev  = () => setTrackIdx(i => (i - 1 + DEMO_TRACKS.length) % DEMO_TRACKS.length);
@@ -2950,83 +3099,16 @@ function MiniPlayer({ audioHub }) {
 
   return (
     <>
-      {/* Modal de cola — centrado en pantalla como SessionCompleteModal */}
+      {/* Cola modal — fixed overlay rendered inline */}
       {queueOpen && (
-        <div className="scrim" role="dialog" aria-modal="true" aria-label="Cola de reproducción"
-          onClick={()=>setQueueOpen(false)}>
-          <div className="m3-card fi" onClick={e=>e.stopPropagation()}
-            style={{ width:"100%", maxWidth:400, margin:16, padding:0, overflow:"hidden",
-              boxShadow:"var(--md-elev-3)" }}>
-
-            {/* Header */}
-            <div style={{ padding:"20px 20px 14px", borderBottom:"1px solid var(--md-outline-variant)",
-              display:"flex", alignItems:"center", gap:12 }}>
-              <div style={{ width:40, height:40, borderRadius:12, background:"var(--md-primary-container)",
-                display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
-                <ListMusic size={18} style={{ color:"var(--secondary)" }}/>
-              </div>
-              <div style={{ flex:1 }}>
-                <div className="title-md">Cola de reproducción</div>
-                <div className="body-sm" style={{ color:"var(--md-on-surface-variant)" }}>
-                  {DEMO_TRACKS.length} canciones · reproducción automática
-                </div>
-              </div>
-              <button className="btn-icon" onClick={()=>setQueueOpen(false)} aria-label="Cerrar">
-                <X size={15}/>
-              </button>
-            </div>
-
-            {/* Pista activa destacada */}
-            <div style={{ padding:"12px 20px", background:"var(--md-surface-1)",
-              borderBottom:"1px solid var(--md-outline-variant)",
-              display:"flex", alignItems:"center", gap:12 }}>
-              <div style={{ fontSize:"1.4rem" }}>{track.emoji}</div>
-              <div style={{ flex:1, minWidth:0 }}>
-                <div className="label-sm" style={{ color:"var(--secondary)", marginBottom:2 }}>
-                  {playing ? "▶ Reproduciendo ahora" : "En pausa"}
-                </div>
-                <div className="title-sm" style={{ color:"var(--md-on-surface)",
-                  whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>
-                  {track.title}
-                </div>
-                <div className="body-sm" style={{ color:"var(--md-on-surface-variant)" }}>{track.artist}</div>
-              </div>
-              <span style={{ fontFamily:"var(--font-mono)", fontSize:".72rem",
-                color:"var(--md-on-surface-variant)", flexShrink:0 }}>{track.dur}</span>
-            </div>
-
-            {/* Lista de canciones */}
-            <div style={{ maxHeight:320, overflowY:"auto" }}>
-              {DEMO_TRACKS.map((t, i) => (
-                <button key={t.id}
-                  className={`queue-track ${i===trackIdx?"playing":""}`}
-                  onClick={()=>{ setTrackIdx(i); setPlaying(true); setQueueOpen(false); }}>
-                  <div className="queue-track-num">
-                    {i===trackIdx && playing
-                      ? <span style={{ color:"var(--secondary)", fontSize:".7rem" }}>▶</span>
-                      : <span style={{ color:"var(--md-on-surface-variant)" }}>{i+1}</span>}
-                  </div>
-                  <div className="queue-track-thumb"
-                    style={{ background: i===trackIdx ? "var(--md-primary-container)" : "var(--md-surface-variant)" }}>
-                    {t.emoji}
-                  </div>
-                  <div style={{ flex:1, minWidth:0 }}>
-                    <div className="body-md" style={{ fontWeight:600, fontSize:".82rem",
-                      color: i===trackIdx ? "var(--secondary)" : "var(--md-on-surface)",
-                      whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>
-                      {t.title}
-                    </div>
-                    <div className="body-sm" style={{ color:"var(--md-on-surface-variant)", fontSize:".72rem" }}>
-                      {t.artist}
-                    </div>
-                  </div>
-                  <span style={{ fontFamily:"var(--font-mono)", fontSize:".68rem",
-                    color:"var(--md-on-surface-variant)", flexShrink:0 }}>{t.dur}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
+        <QueueModal
+          open={queueOpen}
+          onClose={()=>setQueueOpen(false)}
+          trackIdx={trackIdx}
+          setTrackIdx={setTrackIdx}
+          playing={playing}
+          setPlaying={setPlaying}
+        />
       )}
 
       {/* Controles del reproductor */}
@@ -3271,6 +3353,7 @@ function PanelScreen({ onNavigate, frogTask, agendaEvents }) {
   const [focusModal, setFocusModal]     = useState(false);
   const [cfgOpen, setCfgOpen]           = useState(false);
   const [playlistOpen, setPlaylistOpen] = useState(false);
+  const [queueOpen, setQueueOpen]       = useState(false);
   const [vitalReset, setVitalReset]     = useState(false);
   const [reportOpen, setReportOpen]     = useState(false);
   const [stopDialog, setStopDialog]     = useState(false);
@@ -3613,10 +3696,10 @@ function PanelScreen({ onNavigate, frogTask, agendaEvents }) {
                       borderRadius:99, fontWeight:700 }}>Meta: 8h</span>
                   </div>
                   <div style={{ display:"flex", alignItems:"baseline", gap:6 }}>
-                    <span style={{ fontFamily:"var(--font-mono)", fontSize:"1.1rem", fontWeight:700, color:"var(--secondary)" }}>
+                    <span className="progress-count" style={{ fontFamily:"var(--font-mono)", fontSize:"1.1rem", fontWeight:700, color:"var(--secondary)" }}>
                       {tasks.filter(t=>t.done).length} de {tasks.length}
                     </span>
-                    <span className="body-sm" style={{ color:"var(--md-on-surface-variant)", fontWeight:600 }}>
+                    <span className="progress-pct body-sm" style={{ color:"var(--md-on-surface-variant)", fontWeight:600 }}>
                       {tasks.length>0 ? Math.round(tasks.filter(t=>t.done).length/tasks.length*100) : 0}%
                     </span>
                   </div>
@@ -3654,6 +3737,7 @@ function PanelScreen({ onNavigate, frogTask, agendaEvents }) {
               padding:"20px 20px 24px",
               flex:1,
               overflow:"visible",
+              display:"flex", flexDirection:"column",
               borderColor: running ? mode.color : "var(--md-outline-variant)",
               boxShadow: running
                 ? `0 0 0 2px ${mode.color}22, var(--md-elev-2)`
@@ -3669,6 +3753,11 @@ function PanelScreen({ onNavigate, frogTask, agendaEvents }) {
                     color:audioHub.enabled?"var(--accent)":"var(--md-on-surface-variant)" }}
                   aria-label="Playlists de audio">
                   <Music size={14}/>
+                </button>
+                <button className="btn-icon" onClick={()=>setQueueOpen(true)}
+                  style={{ width:32, height:32 }}
+                  aria-label="Cola de reproducción">
+                  <ListMusic size={14}/>
                 </button>
                 <button className="btn-icon" onClick={()=>handleGatedAction("presets", ()=>setCfgOpen(true))}
                   style={{ width:32, height:32, position:"relative" }}
@@ -3760,14 +3849,14 @@ function PanelScreen({ onNavigate, frogTask, agendaEvents }) {
                 )}
 
                 {/* Mini Player: Reiniciar · Audio · ◀ Play ▶ · Cola */}
-                <MiniPlayer audioHub={{ ...audioHub, reset }} />
+                <MiniPlayer audioHub={{ ...audioHub, reset }} queueOpen={queueOpen} setQueueOpen={setQueueOpen} />
               </div>
 
               {/* Divisor */}
               <div className="m3-divider" style={{ margin:"20px 0 16px" }}/>
 
               {/* ── SWITCH MANUAL / AUTOMÁTICO ── */}
-              <div style={{ marginBottom:14 }}>
+              <div style={{ marginBottom:14, flex:1, display:"flex", flexDirection:"column" }}>
                 <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:12 }}>
                   <div className="label-md" style={{ color:"var(--md-on-surface-variant)" }}>MODO DE SESIÓN</div>
                   {/* Tooltip wrapeado directamente, anclado a la derecha */}
@@ -3825,10 +3914,11 @@ function PanelScreen({ onNavigate, frogTask, agendaEvents }) {
                 </div>
 
                 {/* Selector de modos — bloqueado en auto */}
-                <div style={{ display:"flex", flexDirection:"column", gap:8, opacity: scheduleMode==="auto" ? 1 : 1 }}>
+                <div style={{ display:"flex", flexDirection:"column", gap:10, flex:1, justifyContent:"space-between" }}>
                   {scheduleMode==="manual" ? (
                     /* Modo MANUAL: selector libre */
-                    SESSION_MODES.map(m=>(
+                    <div style={{ display:"flex", flexDirection:"column", gap:10, flex:1 }}>
+                    {SESSION_MODES.map(m=>(
                       <Ripple key={m.id} onClick={()=>handleModeChange(m)}
                         style={{
                           padding:"12px 14px", borderRadius:"var(--rad-md)", cursor:"pointer",
@@ -3856,7 +3946,7 @@ function PanelScreen({ onNavigate, frogTask, agendaEvents }) {
                           </div>
                         )}
                       </Ripple>
-                    ))
+                    ))}</div>
                   ) : (
                     /* Modo AUTOMÁTICO: mismos 3 modos, pero el activo se selecciona
                        automáticamente según la tarea pendiente; los otros no son clicables */
@@ -3922,7 +4012,7 @@ function PanelScreen({ onNavigate, frogTask, agendaEvents }) {
 
           {/* Zona derecha: Sensor de postura — alineado con columna derecha (380px) */}
           <div className="fi fi3 deep-flow-blur" style={{ display:"flex", flexDirection:"column" }}>
-            <div className="m3-card" style={{ padding:20, flex:1 }}>
+            <div className="m3-card" style={{ padding:20, flex:1, display:"flex", flexDirection:"column" }}>
               <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:8 }}>
                 <span className="title-sm">Sensor de postura</span>
                 <span style={{ fontFamily:"var(--font-mono)", fontSize:".68rem", fontWeight:700,
@@ -3932,7 +4022,8 @@ function PanelScreen({ onNavigate, frogTask, agendaEvents }) {
               </div>
               {sensorActive
                 ? <ErgonomicAvatar state={postureState}/>
-                : <div style={{ padding:"12px 0", borderTop:"1px solid var(--md-outline-variant)", marginTop:8, display:"flex", alignItems:"center", gap:12 }}>
+                : <div style={{ borderTop:"1px solid var(--md-outline-variant)", marginTop:8,
+                    flex:1, display:"flex", alignItems:"center", gap:12, padding:"0 0 4px" }}>
                     <div style={{ width:56, height:56, borderRadius:"50%", background:"var(--md-surface-variant)",
                       display:"flex", alignItems:"center", justifyContent:"center", fontSize:"1.5rem", flexShrink:0 }}>🧘</div>
                     <div>
@@ -4430,10 +4521,15 @@ function MiniCalendar({ today, selected, onSelect }) {
 }
 
 const CATEGORIES=[
-  { label:"Deep Flow",     color:"#1A237E", icon:<Flame size={11}/> },
-  { label:"Steady Rhythm", color:"#FF6D00", icon:<Waves size={11}/> },
-  { label:"Vital Reset",   color:"#2E7D32", icon:<Leaf  size={11}/> },
+  { label:"Deep Flow",     color:"#1A237E", darkColor:"#7986CB", icon:<Flame size={11}/> },
+  { label:"Steady Rhythm", color:"#FF6D00", darkColor:"#FFB74D", icon:<Waves size={11}/> },
+  { label:"Vital Reset",   color:"#2E7D32", darkColor:"#66BB6A", icon:<Leaf  size={11}/> },
 ];
+
+function useCatColor(cat, isDark) {
+  if (!cat) return "#7986CB";
+  return isDark ? (cat.darkColor || cat.color) : cat.color;
+}
 
 const PRIORITY_METHODS=[
   { label:"Matriz Eisenhower", icon:"🧩" },
@@ -4722,7 +4818,7 @@ function EditEventDialog({ event, onSave, onClose, events }) {
   );
 }
 
-function AgendaScreen({ events, setEvents }) {
+function AgendaScreen({ events, setEvents, isDark=false }) {
   const today = new Date(2026, 4, 12);
   const startOfWeek = new Date(today);
   startOfWeek.setDate(today.getDate() - ((today.getDay()+6)%7));
@@ -4839,15 +4935,16 @@ function AgendaScreen({ events, setEvents }) {
                 <div style={{ minWidth:480, position:"relative" }}>
 
                   {/* Day headers */}
-                  <div style={{ display:"grid", gridTemplateColumns:"52px repeat(7,1fr)",
+                  <div className="agenda-border" style={{ display:"grid", gridTemplateColumns:"52px repeat(7,1fr)",
                     position:"sticky", top:0, zIndex:10, background:"var(--md-surface)",
                     borderBottom:"1px solid var(--md-outline-variant)" }}>
                     <div/>
                     {dispDays.map((d,i)=>(
-                      <div key={i} style={{ padding:"10px 4px", textAlign:"center",
+                      <div key={i} className="agenda-border" style={{ padding:"10px 4px", textAlign:"center",
                         borderLeft:"1px solid var(--md-outline-variant)" }}>
                         <div className="label-sm" style={{ color:"var(--md-on-surface-variant)" }}>{DAY_SHORT[i]}</div>
-                        <div style={{ fontFamily:"var(--font-mono)", fontSize:"1rem", fontWeight:700, lineHeight:1.4,
+                        <div className={isToday(d)?"agenda-today-num":"agenda-day-num"}
+                          style={{ fontFamily:"var(--font-mono)", fontSize:"1rem", fontWeight:700, lineHeight:1.4,
                           color:isToday(d)?"var(--secondary)":"var(--md-on-surface)",
                           background:isToday(d)?"var(--md-primary-container)":"transparent",
                           borderRadius:6, margin:"2px auto 0", width:28, height:28,
@@ -4861,16 +4958,20 @@ function AgendaScreen({ events, setEvents }) {
                   {/* Time rows */}
                   <div style={{ position:"relative" }}>
                     {HOURS.map(h=>(
-                      <div key={h} style={{ display:"grid", gridTemplateColumns:"52px repeat(7,1fr)",
+                      <div key={h} className="agenda-border" style={{ display:"grid", gridTemplateColumns:"52px repeat(7,1fr)",
                         borderBottom:"1px solid var(--md-outline-variant)" }}>
                         <div style={{ padding:"6px 8px 0 0", textAlign:"right" }}>
-                          <span style={{ fontFamily:"var(--font-mono)", fontSize:".63rem",
+                          <span className="ag-time-label" style={{ fontFamily:"var(--font-mono)", fontSize:".63rem",
                             color:"var(--md-on-surface-variant)", display:"block", marginTop:-7 }}>
                             {String(h).padStart(2,"0")}:00
                           </span>
                         </div>
                         {dispDays.map((_,di)=>{
-                          const cellOccupied = hasConflict(events, di, h, 0, h+1, 0);
+                          // Block the cell only if an event STARTS within this hour slot
+                          // (not merely overlaps it from a previous hour)
+                          const cellOccupied = events
+                            .filter(e => e.day === di)
+                            .some(e => e.startH === h);
                           return (
                             <div key={di}
                               onClick={()=>{ if(cellOccupied) return; setNewDefDay(di); setNewDefHour(h); setShowNew(true); }}
@@ -4897,25 +4998,26 @@ function AgendaScreen({ events, setEvents }) {
                               const topPx    = (topMin/60)*CELL_H;
                               const heightPx = (durMin/60)*CELL_H - 2;
                               const c = CATEGORIES[ev.cat];
+                              const ec = useCatColor(c, isDark);
                               return (
                                 <div key={ev.id}
                                   onClick={()=>setDetailEv(ev)}
                                   style={{ position:"absolute", left:3, right:3,
                                     top:topPx, height:Math.max(heightPx,18),
-                                    background:c.color+"22",
-                                    border:`1.5px solid ${c.color}55`,
-                                    borderLeft:`3px solid ${c.color}`,
+                                    background:isDark ? ec+"30" : ec+"22",
+                                    border:`1.5px solid ${ec}${isDark?"88":"55"}`,
+                                    borderLeft:`3px solid ${ec}`,
                                     borderRadius:6, padding:"3px 6px",
                                     pointerEvents:"all", cursor:"pointer",
                                     overflow:"hidden", zIndex:2, transition:"filter .15s" }}
                                   onMouseEnter={e=>e.currentTarget.style.filter="brightness(.92)"}
                                   onMouseLeave={e=>e.currentTarget.style.filter="none"}>
                                   <div style={{ fontFamily:"var(--font-display)", fontSize:".68rem", fontWeight:700,
-                                    color:c.color, lineHeight:1.3, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>
+                                    color:ec, lineHeight:1.3, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>
                                     {ev.title}
                                   </div>
                                   {heightPx>28 && (
-                                    <div style={{ fontFamily:"var(--font-mono)", fontSize:".6rem", color:c.color+"99" }}>
+                                    <div style={{ fontFamily:"var(--font-mono)", fontSize:".6rem", color:ec+"bb" }}>
                                       {String(ev.startH).padStart(2,"0")}:{String(ev.startM).padStart(2,"0")} – {String(ev.endH).padStart(2,"0")}:{String(ev.endM).padStart(2,"0")}
                                     </div>
                                   )}
@@ -5450,7 +5552,7 @@ function SuscripcionScreen({ onClose, onSelectPlan, currentPlan }) {
             <X size={16}/> Continuar en mi flujo actual
           </button>
 
-          <div style={{
+          <div className="plan-header-pill" style={{
             display:"inline-flex", alignItems:"center", gap:8, padding:"5px 16px",
             borderRadius:"var(--rad-full)", background:"var(--md-primary-container)",
             border:"1px solid var(--md-outline-variant)", marginBottom:18
@@ -5460,14 +5562,14 @@ function SuscripcionScreen({ onClose, onSelectPlan, currentPlan }) {
           </div>
 
           <div className="headline-md" style={{ marginBottom:12, color:"var(--md-on-surface)" }}>
-            Elige cómo quieres <span style={{ color:"var(--secondary)" }}>cuidar tu energía</span>
+            Elige cómo quieres <span className="plan-heading-accent" style={{ color:"var(--secondary)" }}>cuidar tu energía</span>
           </div>
           <p className="body-lg" style={{ color:"var(--md-on-surface-variant)", maxWidth:520, margin:"0 auto 24px", lineHeight:1.7 }}>
             Sin urgencias artificiales. Sin contadores regresivos. Solo transparencia total sobre lo que recibes.
           </p>
 
           {/* Billing toggle */}
-          <div style={{
+          <div className="plan-billing-toggle" style={{
             display:"inline-flex", borderRadius:"var(--rad-full)",
             border:"1.5px solid var(--md-outline-variant)",
             overflow:"hidden", background:"var(--md-surface-variant)"
@@ -5495,7 +5597,8 @@ function SuscripcionScreen({ onClose, onSelectPlan, currentPlan }) {
             const proPrice = billing==="annual" ? "$5.6" : "$7";
             const displayPrice = plan.id==="pro" ? proPrice : plan.price;
             return (
-              <div key={plan.id} style={{
+              <div key={plan.id} className={plan.highlight ? "plan-card-pro" : ""}
+                style={{
                 borderRadius:"var(--rad-lg)", padding:28,
                 background: plan.highlight ? "#fff" : "var(--md-surface)",
                 border:`2px solid ${isCurrentPlan ? plan.color : plan.highlight ? plan.color : "var(--md-outline-variant)"}`,
@@ -5508,7 +5611,7 @@ function SuscripcionScreen({ onClose, onSelectPlan, currentPlan }) {
 
                 {/* Icon + Badge row */}
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:20 }}>
-                  <div style={{
+                  <div className="plan-icon-bg" style={{
                     width:46, height:46, borderRadius:14,
                     background:`${plan.color}14`,
                     display:"flex", alignItems:"center", justifyContent:"center",
@@ -5529,15 +5632,15 @@ function SuscripcionScreen({ onClose, onSelectPlan, currentPlan }) {
                 </div>
 
                 {/* Name */}
-                <div className="headline-sm" style={{ color:plan.color, marginBottom:6 }}>{plan.name}</div>
+                <div className="headline-sm plan-name" style={{ color:plan.color, marginBottom:6 }}>{plan.name}</div>
 
                 {/* Precio */}
                 <div style={{ display:"flex", alignItems:"baseline", gap:5, marginBottom: plan.zenDesc ? 10 : 16 }}>
-                  <span style={{
+                  <span className="plan-price" style={{
                     fontFamily:"var(--font-mono)", fontSize:"2.2rem", fontWeight:700,
                     color:"var(--md-on-surface)"
                   }}>{displayPrice}</span>
-                  <span className="body-sm" style={{ color:"var(--md-on-surface-variant)" }}>{plan.period}</span>
+                  <span className="body-sm plan-period" style={{ color:"var(--md-on-surface-variant)" }}>{plan.period}</span>
                 </div>
 
                 {/* Zen Pass description */}
@@ -5559,7 +5662,7 @@ function SuscripcionScreen({ onClose, onSelectPlan, currentPlan }) {
                   {plan.features.map((f,i) => (
                     <div key={i} style={{ display:"flex", alignItems:"flex-start", gap:9 }}>
                       <CheckCircle2 size={15} style={{ color:plan.color, flexShrink:0, marginTop:1 }}/>
-                      <span className="body-sm" style={{ color:"var(--md-on-surface)", lineHeight:1.5 }}>{f}</span>
+                      <span className="body-sm plan-feature" style={{ color:"var(--md-on-surface)", lineHeight:1.5 }}>{f}</span>
                     </div>
                   ))}
                   {plan.locked?.map((f,i) => (
@@ -5569,7 +5672,7 @@ function SuscripcionScreen({ onClose, onSelectPlan, currentPlan }) {
                         border:"1.5px solid var(--md-outline)",
                         flexShrink:0, marginTop:1
                       }}/>
-                      <span className="body-sm" style={{ color:"var(--md-on-surface-variant)", lineHeight:1.5 }}>{f}</span>
+                      <span className="body-sm plan-feature" style={{ color:"var(--md-on-surface-variant)", lineHeight:1.5 }}>{f}</span>
                     </div>
                   ))}
                 </div>
@@ -5770,7 +5873,7 @@ function FocusFlow() {
             <PanelScreen onNavigate={handleNavClick} frogTask={frogTask} agendaEvents={agendaEvents}/>
           </ScreenSlot>
           <ScreenSlot active={screen==="agenda"}>
-            <AgendaScreen events={agendaEvents} setEvents={setAgendaEvents}/>
+            <AgendaScreen events={agendaEvents} setEvents={setAgendaEvents} isDark={document.body.classList.contains("rest-dark")}/>
           </ScreenSlot>
           <ScreenSlot active={screen==="historial"}>
             <HistorialScreen/>
