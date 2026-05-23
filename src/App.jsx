@@ -671,10 +671,10 @@ const M3Styles = () => (
    SESSION STATE HOOK (Deep Flow / Steady Rhythm / Vital Reset)
 ════════════════════════════════════════════ */
 const SESSION_MODES = [
-  { id:"deep-flow",    label:"Deep Flow",     icon:<Flame size={18}/>,  desc:"Enfoque máximo, UI minimal",    color:var_secondary="#1A237E", colorHex:"#1A237E", bg:"#E8EAF6", duration:50 },
-  { id:"steady-rhythm",label:"Steady Rhythm", icon:<Waves size={18}/>,  desc:"Ciclos Pomodoro con apoyo",     colorHex:"#FF6D00",            bg:"#FFF8F0",       duration:25 },
-  { id:"vital-reset",  label:"Vital Reset",   icon:<Leaf  size={18}/>,  desc:"Recuperación activa",           colorHex:"#2E7D32",            bg:"#E8F5E9",       duration:15 },
-];
+  { id:"deep-flow",     label:"Deep Flow",     icon:<Flame size={18}/>,  desc:"Enfoque máximo, UI minimal",  colorHex:"#1A237E", bg:"#E8EAF6", duration:50 },
+  { id:"steady-rhythm", label:"Steady Rhythm", icon:<Waves size={18}/>,  desc:"Ciclos Pomodoro con apoyo",   colorHex:"#FF6D00", bg:"#FFF8F0", duration:25 },
+  { id:"vital-reset",   label:"Vital Reset",   icon:<Leaf size={18}/>,   desc:"Recuperación activa",         colorHex:"#2E7D32", bg:"#E8F5E9", duration:15 },
+]
 // Fix color references
 SESSION_MODES[0].color = "#1A237E";
 SESSION_MODES[1].color = "#FF6D00";
